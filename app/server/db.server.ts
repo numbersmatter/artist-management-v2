@@ -1,5 +1,6 @@
 import type { QueryDocumentSnapshot, Timestamp } from "firebase-admin/firestore";
 import { getFirestore } from "firebase-admin/firestore";
+import { FormSectionDoc } from "./formBuilder/types";
 
 // helper function to convert firestore data to typescript
 const converter = <T>() => ({
@@ -33,5 +34,6 @@ export const db = {
   intents: (profileId: string) =>
     dataPoint<SubmittedIntentDoc>(`${dbBase}/profile/${profileId}/intents`)
     .where("status", "==", "submitted"),
-    
+  sections: (profileId: string) =>
+    dataPoint<FormSectionDoc>(`${dbBase}/profile/${profileId}/sections`),
 };

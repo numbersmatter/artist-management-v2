@@ -19,9 +19,9 @@ export async function loader({params, request}:LoaderArgs) {
 export default function FormSections() {
   const { } = useLoaderData<typeof loader>();
   return (
-    <article className="prose prose-xl">
-      <h1>Welcome to FormSections</h1>
-      <p>This is the  FormSections</p>
-    </article>
+    <main className="">
+        
+      
+    </main>
   );
 }

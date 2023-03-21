@@ -14,19 +14,19 @@ type: FieldTypes;
 label: string;
 fieldId: string;
 options?: { value: string; label: string }[];
-schema? : {
-  optional: boolean,
-  minLength:number,
-  maxLenght: number,
- }
+// schema? : {
+//   optional: boolean,
+//   minLength:number,
+//   maxLenght: number,
+//  }
 };
-export interface Question {
+export interface Section {
 fields: Field[];
 name: string;
 text: string;
 
 }
-export interface Questionform {
+export interface FormSectionDoc {
 fieldOrder: string[];
 fieldObj: { [key:string]:Field};
 name: string;
